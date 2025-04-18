@@ -1,0 +1,148 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-y: hidden;
+    background: 
+    radial-gradient(circle 150px at 50% 53%, rgb(0, 0, 65), black, transparent),
+    radial-gradient(circle 500px at 50% 0%, rgb(63, 63, 63), black);
+    
+    color: whitesmoke;
+    font-weight: bolder;
+}
+@font-face{
+    font-family: 'Cs';
+    src: url(./font/font.ttf);
+}
+.card{
+    box-shadow: 0px 0px 20px rgb(21, 228, 228);
+    font-family: 'Cs';
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+background: rgb(255, 232, 232 , 0.1);
+backdrop-filter: blur(10px);
+transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
+    & img{
+        width: 150px;
+    }
+}
+.card-color{
+    height: 10px;
+    width: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px    ;
+}
+.conteiner{
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.wheel{
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    width: 200px;
+height: 200px;
+position: absolute;
+}
+.wheel-container{
+    display: flex;
+    min-height: inherit;
+    justify-content: space-around;
+    
+    height: 80vh;
+    align-items: center; 
+    width: inherit;
+    position: relative;
+}
+#price-result{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items:center;
+    justify-content: center;
+    backdrop-filter: blur(25px);
+}
+#price-item{
+
+    width: 300px;
+}
+.marker{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgb(199, 0, 93);
+    top: calc(50% - 190px);
+    clip-path: polygon(0 0,100% 0,50% 100%);
+    z-index: 10;
+}
+.modal{
+    display: flex;
+    position: absolute;
+    top:0;
+    width: 200px;
+    height: 100px;
+    border: 1px solid white;
+    
+}
+/* From Uiverse.io by CristianMontoya98 */ 
+.btn {
+   
+    bottom: 13%;
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: rgb(27, 27, 27);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+h1{
+     transform: translateY(20px);
+}
+
