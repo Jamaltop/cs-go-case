@@ -2,6 +2,7 @@ const wheel = document.querySelector('.wheel');
 const btn = document.querySelector('.btn');
 const pItem = document.querySelector('#price-item');
 const pRes = document.querySelector('#price-result');
+const notif = document.querySelector('.salam');
 let arr = [
     {
         name:'Knife',
@@ -63,7 +64,7 @@ function spin (){
         wheel.style.transition = 'all 8s ease';
         wheel.style.transform = ` perspective(1000px) rotateY( ${1080 + randomPrise * 45}deg)`;
         setTimeout(() => {
-            
+            notif.textContent = `YOU WIN ${arr[randomPrise].name}`;
             pRes.style.display = 'flex';
             pItem.src = arr[randomPrise].src
         },9000)
