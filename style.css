@@ -80,7 +80,7 @@ position: absolute;
     backdrop-filter: blur(25px);
 }
 #price-item{
-
+    
     width: 300px;
 }
 .marker{
@@ -146,5 +146,32 @@ h1{
      transform: translateY(20px);
 }
 
-
-
+@media (max-width: 768px) {
+    .conteiner {
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      min-height: 100vh;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  
+    .marker {
+      top: 260px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    #price-item  {
+      width: 200px;
+        
+    }
+  }
+  
