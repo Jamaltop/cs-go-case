@@ -45,12 +45,13 @@ let arr = [
 let isSpin = false;
 arr.reverse();
 inventBtn.addEventListener('click', () => {
-    inventory.style.animation = 'slide 3s ease'
+    inventory.style.animation = 'slide 2s ease'
     setTimeout(() => {
         inventory.style.right = '0px';
     }
     ,3000)
 })
+
 
 function spin (){
     
@@ -58,11 +59,11 @@ function spin (){
         return;
     }
     else{
-    
-       inventory_data.push(arr[Math.floor(Math.random()*7)].name);
+        let randomPrise = Math.floor(Math.random()*7);
+       inventory_data.push(arr[randomPrise]);
        console.log(inventory_data);
         isSpin = true;
-        let randomPrise = Math.floor(Math.random()*7);
+        
         let audio = new Audio('sound/spin.mp3');
     let timeout = setTimeout(() => {
         isSpin = false
@@ -76,18 +77,26 @@ function spin (){
         wheel.style.transition = 'all 8s ease';
         wheel.style.transform = ` perspective(1000px) rotateY( ${1080 + randomPrise * 45}deg)`;
         setTimeout(() => {
+            pushItem();
             notif.textContent = `YOU WIN ${arr[randomPrise].name}`;
             pRes.style.display = 'flex';
             pItem.src = arr[randomPrise].src
         },9000)
     }
-    
+    function pushItem(){
+        inventory.innerHTML = '';
+        inventory_data.forEach((item) => {
+         let img = document.createElement('img');
+         img.src = item.src;
+         inventory.append(img);
+        })
+    }
    
     
 }
 inventory.addEventListener('click', () => {
     inventory.style.right = '-400px';
-    inventory.style.animation = 'slideOut 2s ease';
+    inventory.style.animation = 'slideOut 1s ease';
     setTimeout(() => {
         inventory.style.right = '-300px';
     }

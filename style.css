@@ -176,7 +176,8 @@ h1{
   .inventory{
     position: fixed;
     right: -400px;
-
+align-items: start;
+    justify-content: start;
     width: 300px;
     height: 100vh;
     backdrop-filter: blur(10px);
@@ -185,6 +186,9 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    & img {
+      width: 200px;
+    }
   }
   
   .arrow {
