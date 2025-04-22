@@ -176,6 +176,8 @@ h1{
   .inventory{
     position: fixed;
     right: -400px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px white;
 align-items: start;
     justify-content: start;
     width: 300px;
@@ -329,38 +331,7 @@ align-items: start;
       transform: translateX(-10px);
     }
   }
-  
-  
-  
-
-@media (max-width: 768px) {
-    .conteiner {
-      width: 100%;
-      padding: 20px 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 40px;
-      min-height: 100vh;
-    }
-  
-    h1 {
-      font-size: 24px;
-      margin-top: 10px;
-    }
-      
-    .marker {
-      top: 260px;
-      width: 30px;
-      height: 30px;
-    }
-  
-    #price-item  {
-      width: 200px;
-        
-    }
-  }
+ 
   
   @keyframes slide {
     from {
@@ -380,3 +351,97 @@ align-items: start;
       right: -300px;
     }
   }
+
+
+  @media (max-width: 1000px) {
+
+    .conteiner {
+      width: 400px;
+      padding: 10px;
+      
+      transform: translateX(-30px);
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .wheel-container {
+      flex-direction: column;
+      height: auto;
+      gap: 5px;
+    }
+  
+    .wheel {
+      
+      width: 120px;
+      height: 150px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+  
+    .card {
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+      & img {
+        width: 100px;
+      }
+    }
+  
+    .marker {
+      width: 25px;
+      height: 25px;
+      top: calc(50% - 338px);
+    }
+  
+    .btn1 {
+      position: relative;
+      bottom: auto;
+      width: 100px;
+      height: 40px;
+      transform: translateY(-200px);
+      font-size: 16px;
+    }
+  
+    #price-item {
+      width: 180px;
+    }
+  
+    .inventory {
+      
+      width: 200px;
+      right: -300px;
+      padding: 20px;
+      justify-content: start;
+      align-items: start;
+      gap: 10px;
+      & img {
+        width: 100px;
+      }
+    }
+  
+    #inventory-btn {
+      right: 20px;
+      bottom: 300px;
+      width: 9em;
+      height: 3.5em;
+      font-size: 12px;
+    }
+  
+    .corner {
+      width: 3em;
+      height: 3em;
+    }
+  
+    #rightTop, #leftTop, #leftBottom, #rightBottom {
+      transform: scale(0.8) rotate(45deg);
+    }
+  
+    .succsess-alert {
+      height: auto;
+      padding: 8px;
+      font-size: 10px;
+      gap: 5px;
+      right:30px ;
+      position: absolute;
+    }
+  }
+  
