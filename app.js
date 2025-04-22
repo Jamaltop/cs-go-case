@@ -6,35 +6,35 @@ const notif = document.querySelector('.salam');
 let arr = [
     {
         name:'Knife',
-        src:'/assets/item-1.png'
+        src:'./assets/item-1.png'
     },
     {
         name:'Gold Knife',
-        src:'/assets/item-2.png'
+        src:'./assets/item-2.png'
     },
     {
         name:'Secret Knife',
-        src:'/assets/item-3.png'
+        src:'./assets/item-3.png'
     },
     {
         name:'AUG',
-        src:'/assets/item-4.png'
+        src:'./assets/item-4.png'
     },
     {
         name:'AWP CLASSIC',
-        src:'/assets/item-5.png'
+        src:'./assets/item-5.png'
     },
     {
         name:'Kerambit',
-        src:'/assets/item-6.png'
+        src:'./assets/item-6.png'
     },
     {
         name:'P90',
-        src:'/assets/item-7.png'
+        src:'./assets/item-7.png'
     },
     {
         name:'AWP BOLT',
-        src:'/assets/item-8.png'
+        src:'./assets/item-8.png'
     }
 ]
 let isSpin = false;
