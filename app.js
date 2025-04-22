@@ -49,7 +49,7 @@ inventBtn.addEventListener('click', () => {
     setTimeout(() => {
         inventory.style.right = '0px';
     }
-    ,3000)
+    ,2000)
 })
 
 
@@ -84,12 +84,16 @@ function spin (){
         },9000)
     }
     function pushItem(){
+        
         inventory.innerHTML = '';
         inventory_data.forEach((item) => {
          let img = document.createElement('img');
          img.src = item.src;
          inventory.append(img);
         })
+        if(inventory_data.length == 5){
+            inventory.innerHTML = ''
+        }
     }
    
     

@@ -185,7 +185,7 @@ align-items: start;
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 20px;
     & img {
       width: 200px;
     }
@@ -349,7 +349,7 @@ align-items: start;
       font-size: 24px;
       margin-top: 10px;
     }
-  
+      
     .marker {
       top: 260px;
       width: 30px;
