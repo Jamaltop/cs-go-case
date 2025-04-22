@@ -61,7 +61,7 @@ function spin (){
     else{
         let randomPrise = Math.floor(Math.random()*7);
        inventory_data.push(arr[randomPrise]);
-       console.log(inventory_data);
+       
         isSpin = true;
         
         let audio = new Audio('sound/spin.mp3');
@@ -78,6 +78,7 @@ function spin (){
         wheel.style.transform = ` perspective(1000px) rotateY( ${1080 + randomPrise * 45}deg)`;
         setTimeout(() => {
             pushItem();
+            pItem.style.display = 'block';
             notif.textContent = `YOU WIN ${arr[randomPrise].name}`;
             pRes.style.display = 'flex';
             pItem.src = arr[randomPrise].src
@@ -91,7 +92,7 @@ function spin (){
          img.src = item.src;
          inventory.append(img);
         })
-        if(inventory_data.length == 5){
+        if(inventory_data.length == 10){
             inventory.innerHTML = ''
         }
     }
