@@ -1,5 +1,5 @@
 const wheel = document.querySelector('.wheel');
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('.btn1');
 const pItem = document.querySelector('#price-item');
 const pRes = document.querySelector('#price-result');
 const notif = document.querySelector('.salam');
