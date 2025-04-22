@@ -3,6 +3,11 @@ const btn = document.querySelector('.btn1');
 const pItem = document.querySelector('#price-item');
 const pRes = document.querySelector('#price-result');
 const notif = document.querySelector('.salam');
+const inventory = document.querySelector('.inventory');
+const inventBtn = document.querySelector('#inventory-btn');
+let inventory_data =[
+
+]
 let arr = [
     {
         name:'Knife',
@@ -39,7 +44,13 @@ let arr = [
 ]
 let isSpin = false;
 arr.reverse();
-
+inventBtn.addEventListener('click', () => {
+    inventory.style.animation = 'slide 3s ease'
+    setTimeout(() => {
+        inventory.style.right = '0px';
+    }
+    ,3000)
+})
 
 function spin (){
     
@@ -48,7 +59,8 @@ function spin (){
     }
     else{
     
-       
+       inventory_data.push(arr[Math.floor(Math.random()*7)].name);
+       console.log(inventory_data);
         isSpin = true;
         let randomPrise = Math.floor(Math.random()*7);
         let audio = new Audio('sound/spin.mp3');
@@ -73,6 +85,14 @@ function spin (){
    
     
 }
+inventory.addEventListener('click', () => {
+    inventory.style.right = '-400px';
+    inventory.style.animation = 'slideOut 2s ease';
+    setTimeout(() => {
+        inventory.style.right = '-300px';
+    }
+,2000)
+})
 pRes.addEventListener('click', () => {
     pRes.style.display = 'none';
     pItem.style.display = 'none';
